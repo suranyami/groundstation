@@ -66,6 +66,9 @@ config :groundstation, GroundStationWeb.Endpoint,
     ]
   ]
 
+config :mavlink, dialect: APM
+config :mavlink, connections: ["udp:192.168.20.6:14550"]
+
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 
