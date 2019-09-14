@@ -11,6 +11,15 @@
   color: #eee;
 }
 
+.value-text {
+  font-size: 100%;
+}
+
+.label {
+  font-size: 25%;
+  letter-spacing: 2px;
+}
+
 .wrapper {
   background-color: #222;
   display: grid;
