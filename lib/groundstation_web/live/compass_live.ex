@@ -34,9 +34,13 @@ defmodule GroundStationWeb.CompassLive do
   end
 
   def mount(_session, socket) do
-    if connected?(socket), do: :timer.send_interval(250, self(), :tick)
-
+    MAVLink.Router.subscribe(message: APM.Message.VfrHud)
     {:ok, put_heading(socket, 0)}
+  end
+
+  def handle_info(vfr_hud = %APM.Message.VfrHud{heading: heading}, socket) do
+    IO.inspect(vfr_hud)
+    {:noreply, put_heading(socket, heading)}
   end
 
   def handle_info(:tick, socket) do
