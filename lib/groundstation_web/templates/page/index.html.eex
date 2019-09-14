@@ -1,12 +1,12 @@
 <div class="left">
-  <%= live_render(@conn, GroundStationWeb.GaugeLive) %>
+  <%= live_render(@conn, GroundStationWeb.AltitudeLive) %>
   <%= live_render(@conn, GroundStationWeb.DialLive) %>
   <%= live_render(@conn, GroundStationWeb.DialLive) %>
 </div>
 <div class="right">
   <%= live_render(@conn, GroundStationWeb.GaugeLive) %>
   <%= live_render(@conn, GroundStationWeb.DialLive ) %>
-  <%= live_render(@conn, GroundStationWeb.DialLive) %>
+  <%= live_render(@conn, GroundStationWeb.Heartbeat) %>
 </div>
 
 <div class="main-top-left">
